@@ -1,0 +1,17 @@
+{
+    "extends": "eslint:recommended",
+    "rules": {
+        "no-console": 0,
+        "no-unused-vars": 0
+    },
+    "env": {
+        "node": true,
+        "es6": true
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "spread": true,
+            "experimentalObjectRestSpread": true
+        }
+    }
+}
