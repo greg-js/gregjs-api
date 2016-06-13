@@ -7,7 +7,9 @@ const rootUrl = 'https://gregjs.com';
 
 const _ = require('lodash');
 
-const db = originalDb.models.Post.map(post => {
+const db = originalDb.models.Post.filter(post => {
+  return post.published;
+}).map(post => {
   const category = getCategory(post._id);
 
   return {
