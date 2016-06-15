@@ -19,6 +19,8 @@ const db = originalDb.models.Post.filter(post => {
     category: category,
     tags: getTags(post._id)
   };
+}).sort((a, b) => {
+  return new Date(b.date).getTime() - new Date(a.date).getTime();
 });
 
 function getCategory(post_id) {
