@@ -1,6 +1,6 @@
 {
   "name": "gregjs-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "internal API for gregjs blog",
   "main": "index.js",
   "scripts": {

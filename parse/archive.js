@@ -11,12 +11,14 @@ const archiveResponse = {
   data: originalDb.models.Post.filter(post => {
     return post.published;
   }).map(post => {
+    const cat = getCategoryForPost(post._id);
+
     return {
       _id: post._id,
       title: post.title,
       date: post.date,
-      url: `${rootUrl}/${post.category}/${post.date.slice(0, 4)}/${post.slug}`,
-      category: getCategoryForPost(post._id),
+      category: cat,
+      url: `${rootUrl}/${cat}/${post.date.slice(0, 4)}/${post.slug}`,
       tags: getTagsForPost(post._id)
     };
   }).sort((a, b) => {
