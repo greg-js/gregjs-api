@@ -8,7 +8,7 @@
     "dev": "nodemon index.js",
     "parse-db": "node parse_db.js",
     "start": "npm run parse-db && node index.js",
-    "deploy": "git push dokku master"
+    "deploy": "npm run parse-db && git push dokku master"
   },
   "author": "Gregory Scheerlinck",
   "license": "MIT",
